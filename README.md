@@ -11,11 +11,8 @@ Welcome to the Canvas Drawing App! This simple web application allows users to d
 
 ## 🖼️ Screenshot
 
-![Canvas Drawing App Screenshot](./canvas-drawing-app-screenshot.png)
+![Canvas Drawing App Screenshot](./Screenshot.png)
 
-## 🎥 Demo Video
-
-Check out the app in action: [Canvas Drawing App Demo](https://youtu.be/example-video-id)
 
 ## 🛠️ Technologies Used
 
