@@ -30,6 +30,7 @@ Welcome to the Canvas Drawing App! This simple web application allows users to d
 
 - Click and drag your mouse on the canvas to draw
 - Click the "Reset" button in the top-right corner to clear the canvas
+- Click any of the button to change the StrokeStyle Color
 
 
 
