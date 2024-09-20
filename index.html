@@ -16,11 +16,19 @@
             class="absolute top-4 right-4 bg-blue-500 hover:bg-blue-700  text-white font-bold py-2 px-4 rounded">
             Reset
         </button>
+        <div class="absolute top-4 left-4 flex space-x-2">
+            <button id="redButton" class="w-8 h-8 bg-red-500 rounded-full"></button>
+            <button id="greenButton" class="w-8 h-8 bg-green-500 rounded-full"></button>
+            <button id="blueButton" class="w-8 h-8 bg-blue-500 rounded-full"></button>
+            <button id="yellowButton" class="w-8 h-8 bg-yellow-500 rounded-full"></button>
+            <button id="purpleButton" class="w-8 h-8 bg-purple-500 rounded-full"></button>
+            <button id="orangeButton" class="w-8 h-8 bg-orange-500 rounded-full"></button>
+        </div>
     </main>
 
     <script>
         const canvas = document.getElementById('mainCanvas');
-        const ctx = canvas.getContext('2d');    
+        const ctx = canvas.getContext('2d');
 
         function resizeCanvas() {
             canvas.width = window.innerWidth;
@@ -66,6 +74,39 @@
         const resetButton = document.getElementById('resetButton');
         resetButton.addEventListener('click', function () {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+
+        const redButton = document.getElementById('redButton');
+        const blueButton = document.getElementById('blueButton');
+        const greenButton = document.getElementById('greenButton');
+        const yellowButton = document.getElementById('yellowButton');
+        const purpleButton = document.getElementById('purpleButton');
+        const orangeButton = document.getElementById('orangeButton');
+
+        redButton.addEventListener('click', function () {
+            ctx.strokeStyle = 'red';
+        });
+
+        blueButton.addEventListener('click', function () {
+            ctx.strokeStyle = 'blue';
+        });
+
+        greenButton.addEventListener('click', function () {
+            ctx.strokeStyle = 'green';
+
+        });
+
+
+        yellowButton.addEventListener('click', function () {
+            ctx.strokeStyle = 'yellow';
+        });
+
+        purpleButton.addEventListener('click', function () {
+            ctx.strokeStyle = 'purple';
+        });
+
+        orangeButton.addEventListener('click', function () {
+            ctx.strokeStyle = 'orange';
         });
 
 
