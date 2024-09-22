@@ -60,7 +60,7 @@
             isDrawing = false;
         }
 
-        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('touchStart', startDrawing);
         canvas.addEventListener('mousemove', draw);
         canvas.addEventListener('mouseup', stopDrawing);
         canvas.addEventListener('mouseout', stopDrawing);
