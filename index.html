@@ -65,7 +65,40 @@
         canvas.addEventListener('mouseup', stopDrawing);
         canvas.addEventListener('mouseout', stopDrawing);
 
+        // Touch event handlers for mobile devices
+        function handleStart(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            startDrawing({
+                offsetX: touch.clientX - canvas.offsetLeft,
+                offsetY: touch.clientY - canvas.offsetTop
+            });
+        }
 
+        function handleMove(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            draw({
+                offsetX: touch.clientX - canvas.offsetLeft,
+                offsetY: touch.clientY - canvas.offsetTop
+            });
+        }
+
+        function handleEnd(e) {
+            e.preventDefault();
+            stopDrawing();
+        }
+
+        // Add touch event listeners
+        canvas.addEventListener('touchstart', handleStart, { passive: false });
+        canvas.addEventListener('touchmove', handleMove, { passive: false });
+        canvas.addEventListener('touchend', handleEnd, { passive: false });
+
+        
+
+        
+
+       
         ctx.strokeStyle = 'white'
         ctx.lineWidth = 5;
         ctx.lineCap = 'round';
