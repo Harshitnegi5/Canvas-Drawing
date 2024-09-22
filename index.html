@@ -90,9 +90,9 @@
         }
 
         // Add touch event listeners
-        canvas.addEventListener('touchstart', handleStart, { passive: false });
-        canvas.addEventListener('touchmove', handleMove, { passive: false });
-        canvas.addEventListener('touchend', handleEnd, { passive: false });
+        canvas.addEventListener('touchstart', draw, { passive: false });
+        canvas.addEventListener('touchmove',draw, { passive: false });
+        canvas.addEventListener('touchend', stopDrawing, { passive: false });
 
         
 
